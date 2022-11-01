@@ -19,8 +19,15 @@ view: orders {
         `body-fit-dev.orders.order_actual`
       WHERE
         customer.contactId IS NOT NULL
+        and { % condition select_date %} orders.timestamp { % endcondition %}
+        group by contactId
  ;;
   }
+
+  filter: select_date {
+  type: date
+  suggest_explore: orders
+  suggest_dimension: orders.timestamp }
 
   measure: count {
     type: count
