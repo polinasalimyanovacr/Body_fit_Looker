@@ -19,7 +19,7 @@ view: orders {
         `body-fit-dev.orders.order_actual`
       WHERE
         customer.contactId IS NOT NULL
-        and { % condition select_date %} orders.timestamp { % endcondition %}
+        and { %condition select_date%} orders.currency { %endcondition%}
         group by contactId
  ;;
   }
@@ -27,7 +27,7 @@ view: orders {
   filter: select_date {
   type: date
   suggest_explore: orders
-  suggest_dimension: orders.timestamp }
+  suggest_dimension: orders.currency }
 
   measure: count {
     type: count
