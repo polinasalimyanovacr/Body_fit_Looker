@@ -42,6 +42,10 @@ set: drill_product {
   dimension: product_number {
     type: string
     sql: ${TABLE}.product_number ;;
+    link: {
+      label: "This is the link for the field"
+      url: "mailto: {{value}}"
+    }
   }
 
   set: detail {
