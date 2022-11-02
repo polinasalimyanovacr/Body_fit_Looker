@@ -13,9 +13,14 @@ view: view_for_experiments {
       ;;
   }
 
+#URL with data value to another internal dashboard
   dimension: order_date {
     type: date
     sql: ${TABLE}.order_date;;
+    link: {
+      label: "Explore Orders"
+      url: "https://crystalloids.eu.looker.com/looks/39?ID={{value}}"
+    }
     }
 
   dimension: shipping_date {
@@ -52,7 +57,10 @@ view: view_for_experiments {
 set: default_drill {
   fields: [store_id,
     product_name,
-    product_number]
+    product_number,
+    financial_year,
+    order_date,
+    order_status]
 }
 
 #drill down option independent in dimension
@@ -63,7 +71,7 @@ set: default_drill {
   }
 
 #drill down option + set
-#URL with value from dataset and link to dashboard
+#URL with value from data value and Google in search
   dimension: product_name {
     type: string
     sql: ${TABLE}.product_name;;
@@ -90,6 +98,14 @@ set: drill_product {
   }
 
   set: detail {
-    fields: [store_id, product_name, product_number]
+    fields: [store_id,
+    product_name,
+    product_number,
+    order_date,
+    shipping_date,
+    financial_year,
+    order_status,
+    shipping_country,
+    sales_channel]
   }
 }
