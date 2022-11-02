@@ -32,6 +32,10 @@ view: contacts {
   dimension: username {
     type:  string
     sql: ${TABLE}.username ;;
+    link: {
+      label: "CSend email to the customer"
+      url: "mailto: {{value}}"
+    }
   }
 
   dimension: contact_id {
