@@ -29,6 +29,7 @@ view: contacts {
     drill_fields: [detail*]
   }
 
+#URL to take value and send email
   dimension: username {
     type:  string
     sql: ${TABLE}.username ;;

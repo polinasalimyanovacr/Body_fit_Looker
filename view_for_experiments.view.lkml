@@ -63,10 +63,16 @@ set: default_drill {
   }
 
 #drill down option + set
+#URL with value from dataset and link to dashboard
   dimension: product_name {
     type: string
     sql: ${TABLE}.product_name;;
     drill_fields: [drill_product*]
+    link: {
+      label: "Google"
+      url: "https://google.com/search?q={{value}}"
+      icon_url: "https://google.com/favicon.ico"
+    }
 
   }
 
@@ -76,13 +82,11 @@ set: drill_product {
     product_number,
     product_items.gender]
 }
+
+
   dimension: product_number {
     type: string
     sql: ${TABLE}.product_number ;;
-    link: {
-      label: "This is the link for the field"
-      url: "mailto: {{value}}"
-    }
   }
 
   set: detail {
