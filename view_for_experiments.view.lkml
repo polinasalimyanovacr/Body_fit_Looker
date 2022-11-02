@@ -12,7 +12,7 @@ view: view_for_experiments {
     drill_fields: [default_drill*]
   }
 
-#set of fields for drilling
+#set the fields for drilling
 set: default_drill {
   fields: [store_id,
     product_name,
@@ -21,8 +21,15 @@ set: default_drill {
 
   dimension: store_id {
     type: string
-    sql: ${TABLE}.store_id ;;
+    sql: ${TABLE}.store_id
+    drill_fields: [drill_for_store*];;
   }
+
+#set the fields for drilling store
+set: drill_for_store {
+  fields: [count,product_name]
+}
+
 
   dimension: product_name {
     type: string
