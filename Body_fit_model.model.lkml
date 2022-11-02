@@ -10,7 +10,12 @@ include: "/*.view.lkml"                 # include all views in this project
 explore: view_for_experiments {
   from:  view_for_experiments
   view_label: "view_for_experiments"
-}
+  join:  product_items {
+    type: left_outer
+    sql_on: ${product_items.product_name}=${view_for_experiments.product_name};;
+    relationship: many_to_one
+  }}
+
 
 explore: contacts {
   from:  contacts
@@ -71,6 +76,7 @@ explore: contact_quarterly_purchases {
 explore: product_items {
   from:  product_items
 }
+
 
 # explore: product_categories {
 #   from:  product_categories
