@@ -21,6 +21,7 @@ view: contacts {
         preferredLocale,
         COALESCE(phoneMobile, phoneHome, phoneBusiness, null) AS phone
       FROM `body-fit-dev.contacts.contact_actual` t
+      where contactId='202100007'
  ;;
 }
 
@@ -45,7 +46,7 @@ view: contacts {
     sql: ${TABLE}.contactId ;;
     link: {
       label: "Explore Orders"
-      url: "https://crystalloids.eu.looker.com/looks/40?contactID={{value}}"
+      url: "https://crystalloids.eu.looker.com/looks/40?ID={{value}}"
     }
   }
 
