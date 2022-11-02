@@ -35,7 +35,9 @@ set: default_drill {
 
 #set the fields for drilling
 set: drill_product {
-  fields: [store_id, product_number, product_items.gender]
+  fields: [store_id,
+    product_number,
+    product_items.gender]
 }
   dimension: product_number {
     type: string
