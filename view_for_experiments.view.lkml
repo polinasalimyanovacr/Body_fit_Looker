@@ -14,7 +14,9 @@ view: view_for_experiments {
 
 #set of fields for drilling
 set: default_drill {
-  fields: [store_id]
+  fields: [store_id,
+    product_name,
+    product_number]
 }
 
   dimension: store_id {
