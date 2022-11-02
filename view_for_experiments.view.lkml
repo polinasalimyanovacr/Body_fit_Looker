@@ -22,7 +22,7 @@ view: view_for_experiments {
   dimension: product_name {
     type: string
     sql: ${TABLE}.product_name
-    link: {
+    link:{
       label: "Drill into this day"
     url: "crystalloids.com" };;
   }
