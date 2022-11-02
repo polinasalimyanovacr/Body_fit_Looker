@@ -28,10 +28,15 @@ set: default_drill {
 
   dimension: product_name {
     type: string
-    sql: ${TABLE}.product_name
-  ;;
+    sql: ${TABLE}.product_name;;
+    drill_fields: [drill_product*]
+
   }
 
+#set the fields for drilling
+set: drill_product {
+  fields: [store_id, product_number, product_items.gender]
+}
   dimension: product_number {
     type: string
     sql: ${TABLE}.product_number ;;
