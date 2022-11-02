@@ -7,6 +7,7 @@ view: contacts {
         firstName,
         surnamePrefix,
         surname,
+        username,
         gender,
         age,
         yearOfBirth,
@@ -26,6 +27,11 @@ view: contacts {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+  dimension: username {
+    type:  string
+    sql: ${TABLE}.username ;;
   }
 
   dimension: contact_id {
