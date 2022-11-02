@@ -21,7 +21,7 @@ view: contacts {
         COALESCE(phoneMobile, phoneHome, phoneBusiness, null) AS phone
       FROM `body-fit-dev.contacts.contact_actual` t
  ;;
-  }
+}
 
   measure: count {
     type: count

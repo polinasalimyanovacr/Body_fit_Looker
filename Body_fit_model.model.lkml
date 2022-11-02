@@ -7,6 +7,8 @@ include: "/*.view.lkml"                 # include all views in this project
 # Select the views that should be a part of this model,
 # and define the joins that connect them together.
 
+
+
 explore: contacts {
   from:  contacts
   view_label: "Contacts"
