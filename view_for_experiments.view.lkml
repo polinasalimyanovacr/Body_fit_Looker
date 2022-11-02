@@ -4,7 +4,6 @@ view: view_for_experiments {
     product_name,
     product_number
     FROM `body-fit-dev.body_fit_BI.daily_product_summary`
-  -- {% condition region %} view_for_experiments.region {% endcondition %}
       ;;
   }
 
