@@ -22,7 +22,7 @@ set: default_drill {
   dimension: store_id {
     type: string
     sql: ${TABLE}.store_id
-    drill_fields: [drill_for_store*];;
+    drill_fields: [drill_for_store];;
   }
 
 #set the fields for drilling store
