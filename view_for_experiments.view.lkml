@@ -7,12 +7,15 @@ view: view_for_experiments {
       ;;
   }
 
-
-
   measure: count {
     type: count
-    drill_fields: [detail*]
+    drill_fields: [default_drill*]
   }
+
+#set of fields for drilling
+set: default_drill {
+  fields: [store_id]
+}
 
   dimension: store_id {
     type: string
@@ -22,9 +25,7 @@ view: view_for_experiments {
   dimension: product_name {
     type: string
     sql: ${TABLE}.product_name
-    link:{
-      label: "Drill into this day"
-    url: "crystalloids.com" };;
+  ;;
   }
 
   dimension: product_number {
