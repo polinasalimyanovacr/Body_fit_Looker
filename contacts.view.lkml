@@ -46,7 +46,7 @@ view: contacts {
     sql: ${TABLE}.contactId ;;
     link: {
       label: "Explore Orders"
-      url: "https://crystalloids.eu.looker.com/looks/40?ID={{value}}"
+      url: "https://crystalloids.eu.looker.com/looks/40?contact_id={{value}}"
     }
   }
 
