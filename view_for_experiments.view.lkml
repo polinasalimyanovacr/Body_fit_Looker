@@ -13,6 +13,36 @@ view: view_for_experiments {
       ;;
   }
 
+  dimension: order_date {
+    type: date
+    sql: ${TABLE}.order_date;;
+    }
+
+  dimension: shipping_date {
+    type: date
+    sql: ${TABLE}.shipping_date;;
+  }
+
+  dimension: financial_year {
+    type: number
+    sql: ${TABLE}.financial_year;;
+  }
+
+  dimension: order_status {
+    type: string
+    sql: ${TABLE}.order_status;;
+  }
+
+  dimension: shipping_country {
+    type: string
+    sql: ${TABLE}.shipping_country;;
+  }
+
+  dimension: sales_channel {
+    type: string
+    sql: ${TABLE}.sales_channel;;
+  }
+
   measure: count {
     type: count
     drill_fields: [default_drill*]
@@ -25,13 +55,14 @@ set: default_drill {
     product_number]
 }
 
+#drill down option independent in dimension
   dimension: store_id {
     type: string
     sql: ${TABLE}.store_id;;
     drill_fields: [product_name, count, product_number]
   }
 
-
+#drill down option + set
   dimension: product_name {
     type: string
     sql: ${TABLE}.product_name;;
