@@ -1,3 +1,5 @@
+include: "/Body_fit_model.model"
+
 view: orders {
   derived_table: {
     sql: SELECT
@@ -19,19 +21,50 @@ view: orders {
         `body-fit-dev.orders.order_actual`
       WHERE
         customer.contactId IS NOT NULL
-        and { %condition select_date%} orders.currency { %endcondition%}
-        group by contactId
- ;;
+       ;;
   }
 
-  filter: select_date {
-  type: date
-  suggest_explore: orders
-  suggest_dimension: orders.currency }
+  measure: max_pruchase_date {
+    type: string
+    sql: MAX(${timestamp_date}) ;;
+  }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
+  measure: min_pruchase_date {
+    type: string
+    sql: MIN(${timestamp_date}) ;;
+  }
+
+  measure: count_orders {
+    type: count_distinct
+    sql: ${transaction_id} ;;
+    drill_fields: [currency]
+  }
+
+  measure: count_contacts {
+    type: count_distinct
+    sql: ${contact_id} ;;
+    # drill_fields: [detail*]
+  }
+
+  measure: total_revenue {
+    type: sum_distinct
+    sql_distinct_key: ${transaction_id} ;;
+    sql: ${total_order_revenue} ;;
+    # value_format: ${currency} ;;
+  }
+
+  measure: avg_revenue {
+    type: average_distinct
+    sql_distinct_key: ${transaction_id} ;;
+    sql: ${total_order_revenue} ;;
+    # value_format: ${currency} ;;
+  }
+
+  measure: median_revenue {
+    type: median
+    sql_distinct_key: ${transaction_id} ;;
+    sql: ${total_order_revenue} ;;
+    # value_format: ${currency} ;;
   }
 
   dimension: transaction_id {
@@ -52,6 +85,7 @@ view: orders {
   dimension: contact_email_address {
     type: string
     sql: ${TABLE}.contactEmailAddress ;;
+    drill_fields: [currency]
   }
 
   dimension: shipping_address_street {
