@@ -22,13 +22,8 @@ set: default_drill {
   dimension: store_id {
     type: string
     sql: ${TABLE}.store_id
-    drill_fields: [drill_for_store];;
+    drill_fields: [product_name, count];;
   }
-
-#set the fields for drilling store
-set: drill_for_store {
-  fields: [count,product_name]
-}
 
 
   dimension: product_name {
