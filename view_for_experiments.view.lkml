@@ -2,7 +2,13 @@ view: view_for_experiments {
   derived_table: {
     sql: SELECT store_id,
     product_name,
-    product_number
+    product_number,
+    order_date,
+    shipping_date,
+    financial_year,
+    order_status,
+    shipping_country,
+    sales_channel
     FROM `body-fit-dev.body_fit_BI.daily_product_summary`
       ;;
   }
