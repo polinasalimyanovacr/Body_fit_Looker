@@ -27,7 +27,12 @@ view: contacts {
 
   measure: count {
     type: count
-    drill_fields: [detail*]
+    drill_fields: [count_drill*]
+  }
+
+#set the fields for drilling
+  set: count_drill {
+    fields: [order.contactEmailAddress]
   }
 
 #URL to take value and send email
