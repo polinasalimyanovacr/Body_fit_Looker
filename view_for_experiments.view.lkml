@@ -42,7 +42,7 @@ view: view_for_experiments {
     sql: ${TABLE}.shipping_country;;
     link: {
       label: "Explore Orders"
-      url: "https://crystalloids.eu.looker.com/looks/39?Shipping Address Country Code={{value}}"
+      url: "https://crystalloids.eu.looker.com/looks/39?shipping_country={{value}}"
     }
   }
 
