@@ -26,6 +26,7 @@ view: view_for_experiments {
   dimension: shipping_date {
     type: date
     sql: ${TABLE}.shipping_date;;
+    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?fields=financial_year&f[store.id]={{ value }}"><button>Order History</button></a> ;;
   }
 
   dimension: financial_year {
