@@ -39,17 +39,12 @@ view: contacts {
       url: "mailto: {{value}}"
     }
   }
-#URL to take value and redirect to dashboard
+
   dimension: contact_id {
     type: string
     primary_key: yes
     sql: ${TABLE}.contactId ;;
-    link: {
-      label: "Explore Orders"
- url: "https://crystalloids.eu.looker.com/dashboards/48?contactId={{ value }}"
 
-
-    }
   }
 
   dimension: email_hash_code {

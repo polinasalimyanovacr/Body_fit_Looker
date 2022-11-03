@@ -19,11 +19,11 @@ view: view_for_experiments {
 
     }
 
-#URL as a button on the page
+
   dimension: shipping_date {
     type: date
     sql: ${TABLE}.shipping_date;;
-    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?fields=financial_year&f[store.id]={{ value }}"><button>Order History</button></a> ;;
+
   }
 
   dimension: financial_year {
@@ -67,10 +67,12 @@ set: default_drill {
 }
 
 #drill down option independent in dimension
+#URL as a button on the page
   dimension: store_id {
     type: string
     sql: ${TABLE}.store_id;;
     drill_fields: [product_name, count, product_number]
+    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?store_id ={{value}}"><button>Order History</button></a> ;;
   }
 
 #drill down option + set
