@@ -111,6 +111,10 @@ view: orders {
   dimension: shipping_address_country_code {
     type: string
     sql: ${TABLE}.shippingAddressCountryCode ;;
+    link: {
+      label: "Explore Orders"
+      url: "https://crystalloids.eu.looker.com/looks/39?shippingAddressCountryCode={{value}}"
+    }
   }
 
   dimension: total_order_revenue {

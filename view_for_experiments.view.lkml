@@ -36,7 +36,7 @@ view: view_for_experiments {
     sql: ${TABLE}.order_status;;
   }
 
-#URL with data value to another internal dashboard
+#URL with data value to another internal dashboard - TO CHECK !!!
   dimension: shipping_country {
     type: string
     sql: ${TABLE}.shipping_country;;
@@ -67,7 +67,7 @@ set: default_drill {
 }
 
 #drill down option independent in dimension
-#URL as a button on the page
+#URL as a button on the page - TO CHECK!!
   dimension: store_id {
     type: string
     sql: ${TABLE}.store_id;;
