@@ -25,12 +25,12 @@ view: orders {
   }
 
   measure: max_pruchase_date {
-    type: string
+    type: date
     sql: MAX(${timestamp_date}) ;;
   }
 
   measure: min_pruchase_date {
-    type: string
+    type: date
     sql: MIN(${timestamp_date}) ;;
   }
 
