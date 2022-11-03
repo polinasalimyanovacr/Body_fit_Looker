@@ -36,14 +36,10 @@ view: view_for_experiments {
     sql: ${TABLE}.order_status;;
   }
 
-#URL with data value to another internal dashboard - TO CHECK !!!
   dimension: shipping_country {
     type: string
     sql: ${TABLE}.shipping_country;;
-    link: {
-      label: "Explore Orders"
-      url: "https://crystalloids.eu.looker.com/looks/39?shipping_country={{value}}"
-    }
+
   }
 
   dimension: sales_channel {
@@ -77,6 +73,7 @@ set: default_drill {
 
 #drill down option + set
 #URL with value from data value and Google in search
+#URL with data value to another internal dashboard - TO CHECK !!!
   dimension: product_name {
     type: string
     sql: ${TABLE}.product_name;;
