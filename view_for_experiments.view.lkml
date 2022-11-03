@@ -13,16 +13,13 @@ view: view_for_experiments {
       ;;
   }
 
-#URL with data value to another internal dashboard
   dimension: order_date {
     type: date
     sql: ${TABLE}.order_date;;
-    link: {
-      label: "Explore Orders"
-      url: "https://crystalloids.eu.looker.com/looks/39?ID={{value}}"
-    }
+
     }
 
+#URL as a button on the page
   dimension: shipping_date {
     type: date
     sql: ${TABLE}.shipping_date;;
@@ -39,9 +36,14 @@ view: view_for_experiments {
     sql: ${TABLE}.order_status;;
   }
 
+#URL with data value to another internal dashboard
   dimension: shipping_country {
     type: string
     sql: ${TABLE}.shipping_country;;
+    link: {
+      label: "Explore Orders"
+      url: "https://crystalloids.eu.looker.com/looks/39?Shipping Address Country Code={{value}}"
+    }
   }
 
   dimension: sales_channel {
