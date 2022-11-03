@@ -86,6 +86,10 @@ set: default_drill {
       url: "https://google.com/search?q={{value}}"
       icon_url: "https://google.com/favicon.ico"
     }
+    link: {
+      label: "Explore Orders"
+      url: "https://crystalloids.eu.looker.com/looks/39?product_name = {{value}}"
+    }
 
   }
 
