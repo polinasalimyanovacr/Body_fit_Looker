@@ -32,9 +32,9 @@ view: contacts {
 
 #set the fields for drilling
   set: count_drill {
-    fields: [orders.contact_email_address,
-      orders.shipping_address_city,
-      orders.count_orders]
+    fields: [surname,
+      gender,
+      age]
   }
 
 #URL to take value and send email
