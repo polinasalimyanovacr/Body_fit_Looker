@@ -32,10 +32,13 @@ view: contacts {
 
 #set the fields for drilling
   set: count_drill {
-    fields: [
+    fields: [contacts.first_name,
       surname,
-      phone,
-      orders.count_orders
+      contacts.country_code,
+      orders.count_orders,
+      orders.total_revenue,
+      orders.min_pruchase_date,
+      phone
       ]
   }
 
