@@ -68,7 +68,7 @@ set: default_drill {
     type: string
     sql: ${TABLE}.store_id;;
     drill_fields: [product_name, count, product_number]
-    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?store_id ={{value}}"><button>Order History</button></a> ;;
+    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?store_id ={{value}}"><button>{{value}}}}</button></a> ;;
   }
 
 #drill down option + set
