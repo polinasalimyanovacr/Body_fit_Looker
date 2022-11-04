@@ -59,6 +59,11 @@ view: orders {
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
     # value_format: ${currency} ;;
+    link: {
+      label: "Google"
+      url: "https://google.com/search?q={{value}}"
+      icon_url: "https://google.com/favicon.ico"
+    }
   }
 
   measure: median_revenue {
@@ -115,11 +120,7 @@ view: orders {
   dimension: shipping_address_country_code {
     type: string
     sql: ${TABLE}.shippingAddresscountrycode ;;
-    link: {
-      label: "Google"
-      url: "https://google.com/search?q={{value}}"
-      icon_url: "https://google.com/favicon.ico"
-    }
+
     }
 
   dimension: total_order_revenue {
