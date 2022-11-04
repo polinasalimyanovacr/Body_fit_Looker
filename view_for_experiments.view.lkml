@@ -15,6 +15,7 @@ view: view_for_experiments {
 
   dimension: order_date {
     type: date
+    description: "Order date. Doesn't have drilled fields"
     sql: ${TABLE}.order_date;;
 
     }
@@ -22,6 +23,7 @@ view: view_for_experiments {
 
   dimension: shipping_date {
     type: date
+    description: "Shipping date, that is used for drill down at Looks and Dashboards"
     sql: ${TABLE}.shipping_date;;
 
   }
