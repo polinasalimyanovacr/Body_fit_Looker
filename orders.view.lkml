@@ -85,7 +85,10 @@ view: orders {
   dimension: contact_email_address {
     type: string
     sql: ${TABLE}.contactEmailAddress ;;
-    drill_fields: [currency]
+    link: {
+      label: "Send email to the customer"
+      url: "mailto: {{value}}"
+    }
   }
 
   dimension: shipping_address_street {
