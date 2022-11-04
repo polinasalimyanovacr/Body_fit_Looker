@@ -37,7 +37,8 @@ view: contacts {
       age,
       county,
       city,
-      phone]
+      phone,
+      orderlines.currency]
   }
 
 #URL to take value and send email
