@@ -114,12 +114,13 @@ view: orders {
 
   dimension: shipping_address_country_code {
     type: string
-    sql: ${TABLE}.shippingAddressCountryCode ;;
-#    link: {
-#      label: "Explore Orders"
- #     url: "https://crystalloids.eu.looker.com/looks/39?shippingAddressCountryCode={{value}}"
- #   }
-  }
+    sql: ${TABLE}.shippingAddresscountrycode ;;
+    link: {
+      label: "Google"
+      url: "https://google.com/search?q={{value}}"
+      icon_url: "https://google.com/favicon.ico"
+    }
+    }
 
   dimension: total_order_revenue {
     type: number
