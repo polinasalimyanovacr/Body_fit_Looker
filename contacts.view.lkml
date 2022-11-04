@@ -34,11 +34,12 @@ view: contacts {
   set: count_drill {
     fields: [
       surname,
-      age,
-      county,
-      city,
       phone,
-      orderlines.currency]
+      orderlines.currency,
+      orders.timestamp,
+      product_items.itemStatus,
+      view_for_experiments.order_date
+      ]
   }
 
 #URL to take value and send email
