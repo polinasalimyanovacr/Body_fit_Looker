@@ -35,10 +35,7 @@ view: contacts {
     fields: [
       surname,
       phone,
-      orderlines.currency,
-      orders.timestamp,
-      product_items.itemStatus,
-      view_for_experiments.order_date
+      orders.count_orders
       ]
   }
 
