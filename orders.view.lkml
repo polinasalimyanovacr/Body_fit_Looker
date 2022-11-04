@@ -37,7 +37,11 @@ view: orders {
   measure: count_orders {
     type: count_distinct
     sql: ${transaction_id} ;;
-
+    link: {
+      label: "Google"
+      url: "https://google.com/search?q={{value}}"
+      icon_url: "https://google.com/favicon.ico"
+    }
 
   }
 
@@ -59,11 +63,7 @@ view: orders {
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
     # value_format: ${currency} ;;
-    link: {
-      label: "Google"
-      url: "https://google.com/search?q={{value}}"
-      icon_url: "https://google.com/favicon.ico"
-    }
+
   }
 
   measure: median_revenue {
