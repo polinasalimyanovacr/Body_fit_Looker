@@ -34,7 +34,6 @@ view: contacts {
   set: count_drill {
     fields: [contacts.first_name,
       surname,
-      contacts.country_code,
       orders.count_orders,
       orders.total_revenue,
       orders.min_pruchase_date,

@@ -13,8 +13,9 @@ explore: view_for_experiments {
   join:  product_items {
     type: left_outer
     sql_on: ${product_items.product_name}=${view_for_experiments.product_name};;
-    relationship: many_to_one
-  }}
+    relationship: many_to_one}
+
+  }
 
 
 explore: contacts {
