@@ -37,7 +37,8 @@ view: orders {
   measure: count_orders {
     type: count_distinct
     sql: ${transaction_id} ;;
-    drill_fields: [currency]
+
+
   }
 
   measure: count_contacts {
