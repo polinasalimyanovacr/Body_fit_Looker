@@ -43,6 +43,10 @@ explore: orders {
     sql_on: ${orderlines.product_sku} = ${product_items.item_sku} ;;
     relationship: many_to_one
   }
+  join: view_for_experiments {
+    type: left_outer
+    sql_on: ${product_items.product_name}=${view_for_experiments.product_name};;
+    relationship: many_to_one}
 }
 
 explore: orderlines {
@@ -66,6 +70,8 @@ explore: contact_quarterly_purchases {
     sql_on: ${contacts.contact_id} = ${contact_quarterly_purchases.contact_id} ;;
     relationship: many_to_one
   }
+
+
   # join: orders {
   #   type: left_outer
   #   view_label: "Order Traits"
