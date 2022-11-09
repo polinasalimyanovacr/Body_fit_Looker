@@ -45,8 +45,15 @@ explore: orders {
   }
   join: view_for_experiments {
     type: left_outer
+    view_label: "View for experiments"
     sql_on: ${product_items.product_name}=${view_for_experiments.product_name};;
     relationship: many_to_one}
+  join: contacts {
+    type: left_outer
+    view_label: "Contacts"
+    sql_on: ${orders.contact_id} = ${contacts.contact_id} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: orderlines {
