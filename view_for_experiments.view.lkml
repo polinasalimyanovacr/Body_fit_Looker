@@ -43,7 +43,9 @@ view: view_for_experiments {
   set: drill_status {
     fields: [store_id,
       product_number,
-      financial_year, sales_channel, count]
+      financial_year,
+      sales_channel,
+      count]
   }
 
 
