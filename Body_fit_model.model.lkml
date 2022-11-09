@@ -25,9 +25,10 @@ explore: contacts {
     type: left_outer
     view_label: "Order Traits"
     sql_on: ${orders.contact_id} = ${contacts.contact_id} ;;
-    relationship: many_to_one
-  }
+    relationship: many_to_one}
 }
+
+#The main explore
 
 explore: orders {
   view_label: "Orders"

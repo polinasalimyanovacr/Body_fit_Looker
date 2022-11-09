@@ -36,7 +36,16 @@ view: view_for_experiments {
   dimension: order_status {
     type: string
     sql: ${TABLE}.order_status;;
+    drill_fields: [drill_status*]
   }
+
+#set the fields for drilling
+  set: drill_status {
+    fields: [store_id,
+      product_number,
+      financial_year]
+  }
+
 
   dimension: shipping_country {
     type: string
