@@ -48,8 +48,22 @@ view: orders {
   measure: count_contacts {
     type: count_distinct
     sql: ${contact_id} ;;
-    # drill_fields: [detail*]
+    drill_fields: [detail_count_contacts*]
+
   }
+
+#set the fields for drilling
+  set: detail_count_contacts {
+    fields: [contact_email_address,
+     contact_language_code,
+    count_orders,
+      currency,
+  min_pruchase_date,
+  max_pruchase_date,
+  shipping_address_country_code,
+  shipping_address_city
+    ]
+}
 
   measure: total_revenue {
     type: sum_distinct
