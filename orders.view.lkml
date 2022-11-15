@@ -85,11 +85,12 @@ view: orders {
     type: average_distinct
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
+    value_format: "0.0"
 
-    filters: {
-      field: timestamp_year
-      value: "2020"
-    }
+   # filters: {
+    #  field: timestamp_year
+    #  value: "2020"
+    #}
 
     html:
     <ul>
