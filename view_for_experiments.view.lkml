@@ -63,8 +63,12 @@ view: view_for_experiments {
   measure: count {
     type: count
     drill_fields: [default_drill*]
+    link: {
+      url: "crystalloids.com"
+    }
     html:
-    <li> value: {{value}} </li>;;
+    <li> value: {{value}} </li>
+    <li> link: {{link}} </li>;;
   }
 
 #set the fields for drilling
