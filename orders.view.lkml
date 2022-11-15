@@ -86,12 +86,6 @@ view: orders {
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
     value_format: "0.0"
-
-   # filters: {
-    #  field: timestamp_year
-    #  value: "2020"
-    #}
-
     html:
     <ul>
     <li> value: {{ value }} </li>
@@ -105,8 +99,13 @@ view: orders {
     <li> dialect: {{ _dialect._name }} </li>
     <li> access filter: {{ _access_filters['company.name'] }} </li>
     <li> query timezone: {{ _query._query_timezone }} </li>
-
     </ul> ;;
+
+    # filters: {
+    #  field: timestamp_year
+    #  value: "2020"
+    #}
+
   }
 
   measure: median_revenue {
