@@ -1,5 +1,5 @@
-- dashboard: dashboard_2__marketing_case
-  title: Dashboard 2 - Marketing case
+- dashboard: main_dashboard__marketing_case
+  title: Main Dashboard - Marketing case
   layout: newspaper
   preferred_viewer: dashboards-next
   crossfilter_enabled: true
