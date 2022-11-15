@@ -69,7 +69,10 @@ view: view_for_experiments {
     html:
     <li> value: {{value}} </li>
     <li> link: {{link}} </li>
-    <li> model: {{_model._name}}</li>;;
+    <li> model: {{_model._name}}</li>
+     <li> view: {{_view._name}}</li>
+     <li> explore: {{_explore._name}}</li>
+     <li> field: {{_field._name}}</li>;;
   }
 
 #set the fields for drilling
