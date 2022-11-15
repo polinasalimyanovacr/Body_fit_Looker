@@ -90,7 +90,6 @@ view: orders {
       field: timestamp_year
       value: "2020"
     }
-    drill_fields: [detail_count_contacts*]
 
     html:
     <ul>
