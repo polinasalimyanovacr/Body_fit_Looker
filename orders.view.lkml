@@ -24,6 +24,14 @@ view: orders {
        ;;
   }
 
+  #Default measure to create links out of
+  measure: link_generator {
+    hidden:  yes
+    type: number
+    sql:  ;;
+  drill_fields: [link_generator]
+  }
+
   measure: max_pruchase_date {
     type: date
     sql: MAX(${timestamp_date}) ;;
@@ -76,7 +84,10 @@ view: orders {
     type: average_distinct
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
-    # value_format: ${currency} ;;
+    filters: {
+      field: timestamp_year
+      value: "2020"
+    }
 
   }
 
