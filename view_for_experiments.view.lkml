@@ -17,6 +17,20 @@ view: view_for_experiments {
     type: date
     description: "Order date. Doesn't have drilled fields"
     sql: ${TABLE}.order_date;;
+    html:
+    <ul>
+    <li> value: {{ value }} </li>
+    <li> rendered_value: {{ rendered_value }} </li>
+    <li> linked_value: {{ linked_value }} </li>
+    <li> link: {{ link }} </li>
+    <li> model: {{ _model._name }} </li>
+    <li> view: {{ _view._name }} </li>
+    <li> explore: {{ _explore._name }} </li>
+    <li> field: {{ _field._name }} </li>
+    <li> dialect: {{ _dialect._name }} </li>
+    <li> access filter: {{ _access_filters['company.name'] }} </li>
+    <li> query timezone: {{ _query._query_timezone }} </li>
+    </ul> ;;
 
     }
 
