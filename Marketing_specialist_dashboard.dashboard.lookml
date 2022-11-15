@@ -340,6 +340,9 @@
     col: 0
     width: 24
     height: 7
+
+    #dashboard filter definition
+
   filters:
   - name: Eligible to send email
     title: Eligible to send email
