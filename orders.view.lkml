@@ -80,15 +80,17 @@ view: orders {
     # value_format: ${currency} ;;
   }
 
+#Default filter applied for the explore
   measure: avg_revenue {
     type: average_distinct
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
+
     filters: {
       field: timestamp_year
       value: "2020"
     }
-
+    drill_fields: [detail_count_contacts*]
   }
 
   measure: median_revenue {
