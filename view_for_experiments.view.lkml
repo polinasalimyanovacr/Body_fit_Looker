@@ -13,10 +13,12 @@ view: view_for_experiments {
       ;;
   }
 
+#HTML parameter to display date
   dimension: order_date {
     type: date
     description: "Order date. Doesn't have drilled fields"
     sql: ${TABLE}.order_date;;
+    html:{{ rendered_value | date: "%b %d, %y" }};;
     }
 
 #Allow to fill - dates that don't return any data are autimatically filled in by Looker
