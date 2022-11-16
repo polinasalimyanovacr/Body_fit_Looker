@@ -73,7 +73,8 @@ view: view_for_experiments {
      <li> view: {{_view._name}}</li>
      <li> explore: {{_explore._name}}</li>
      <li> field: {{_field._name}}</li>
-    <li> dialect: {{_dialect._name}} </li>;;
+    <li> dialect: {{_dialect._name}} </li>
+    <li> access filter: {{_access_filters['view_for_experiments.sales_channel']}} </li>;;
   }
 
 #set the fields for drilling
