@@ -13,7 +13,7 @@ view: view_for_experiments {
       ;;
   }
 
-#HTML parameter to display date
+#HTML parameter to display date Jan 14, 22
   dimension: order_date {
     type: date
     description: "Order date. Doesn't have drilled fields"

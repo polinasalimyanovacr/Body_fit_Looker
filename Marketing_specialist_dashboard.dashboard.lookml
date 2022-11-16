@@ -174,10 +174,13 @@
     col: 0
     width: 24
     height: 2
+
+    #Button Send the selection
   - type: button
     name: button_243
     rich_content_json: '{"text":"Send selection","description":"Send your selection
-      to Google Ads after the final check of your customers","newTab":true,"alignment":"center","size":"large","style":"FILLED","color":"#80868B","href":"https://crystalloids.eu.looker.com/looks/56?toggle=fil"}'
+      to Google Ads after the final check of your customers","newTab":true,"alignment":"center","size":"large","style":"FILLED","color":"#80868B",
+      "href":"https://crystalloids.eu.looker.com/looks/56?&f[orders.shipping_address_country_code]={{value}}"}'
     row: 2
     col: 16
     width: 7
@@ -186,8 +189,11 @@
     type: text
     title_text: ''
     subtitle_text: ''
-    body_text: "<center><img src=\"https://drive.google.com/uc?id=1Zn2UUZFFTJiqn1CYlT-mO7-7VFMpEShl\"\
-      \ width=\"200\" height=\"150\"/></center>\n\n"
+    body_text: |+
+      <center><img src="https://drive.google.com/uc?id=1Zn2UUZFFTJiqn1CYlT-mO7-7VFMpEShl" width="200" height="150"/></center>
+
+      <a href="https://crystalloids.eu.looker.com/explore/Body_fit_model/orders?Date+Range={{ _filters['orders.contact_email_address']| url_encode }}">{{ value }} </a>
+
     row: 4
     col: 16
     width: 8
@@ -340,9 +346,6 @@
     col: 0
     width: 24
     height: 7
-
-    #dashboard filter definition
-
   filters:
   - name: Eligible to send email
     title: Eligible to send email
