@@ -19,7 +19,7 @@ view: view_for_experiments {
     sql: ${TABLE}.order_date;;
     }
 
-
+#Allow to fill - dates that don't return any data are autimatically filled in by Looker
   dimension: shipping_date {
     type: date
     description: "Shipping date, that is used for drill down at Looks and Dashboards"
