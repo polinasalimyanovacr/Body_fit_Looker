@@ -35,7 +35,7 @@ view: view_for_experiments {
     {% if value > 2019 %}
     <span style="color:darkgreen;"> {{rendered_value}} </span>
     {% else %}
-    <span stype="color:white;"> {{rendered_value}} </span>
+    <span stype="color:darkred;"> {{rendered_value}} </span>
     {% endif %};;
 
   }
@@ -43,6 +43,14 @@ view: view_for_experiments {
   dimension: order_status {
     type: string
     sql: ${TABLE}.order_status;;
+    html:
+    {% if value == 'dispatched' %}
+    <p style="color: red; background-color: orange; font-size: 100%; text-align:center"> {{rendered_value}}</p>
+    {% elsif value == 'cancelled' %}
+    <p><img src="https://drive.google.com/uc?id=1Zn2UUZFFTJiqn1CYlT-mO7-7VFMpEShl" width="200" height="150"/> {{rendered_value}} </p>
+    {% else %}
+    <p styl="color:black; background-color:lightblue; font-size:100%">{{rendered_value}}</p>
+    {% endif %};;
     drill_fields: [drill_status*]
   }
 
