@@ -74,7 +74,8 @@ view: view_for_experiments {
      <li> explore: {{_explore._name}}</li>
      <li> field: {{_field._name}}</li>
     <li> dialect: {{_dialect._name}} </li>
-    <li> access filter: {{_access_filters['view_for_experiments.sales_channel']}} </li>;;
+    <li> query timezaone: {{_query._query_timezone}} </li>
+    <li> filters: {{_filters['view_for_experiments.sales_channel']}}</li>;;
   }
 
 #set the fields for drilling
