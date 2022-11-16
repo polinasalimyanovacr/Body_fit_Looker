@@ -35,7 +35,7 @@ view: view_for_experiments {
     {% if value > 2020 %}
     <span style="color:darkgreen;"> {{rendered_value}} </span>
     {% else %}
-    <span stype="color:darkred;"> {{rendered_value}} </span>
+    <span stype="color:goldenrod;"> {{rendered_value}} </span>
     {% endif %};;
 
   }
