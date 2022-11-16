@@ -32,10 +32,10 @@ view: view_for_experiments {
     type: number
     sql: ${TABLE}.financial_year;;
     html:
-    {% if value > 2020 %}
+    {% if value > 2019 %}
     <span style="color:darkgreen;"> {{rendered_value}} </span>
     {% else %}
-    <span stype="color:goldenrod;"> {{rendered_value}} </span>
+    <span stype="color:white;"> {{rendered_value}} </span>
     {% endif %};;
 
   }
