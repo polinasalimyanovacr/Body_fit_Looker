@@ -27,7 +27,7 @@ view: view_for_experiments {
 
   }
 
-#HTML
+#HTML conditionally formating
   dimension: financial_year {
     type: number
     sql: ${TABLE}.financial_year;;
@@ -40,6 +40,7 @@ view: view_for_experiments {
 
   }
 
+#HTML conditionally formating
   dimension: order_status {
     type: string
     sql: ${TABLE}.order_status;;
