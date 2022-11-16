@@ -24,6 +24,7 @@ view: view_for_experiments {
     type: date
     description: "Shipping date, that is used for drill down at Looks and Dashboards"
     sql: ${TABLE}.shipping_date;;
+    allow_fill: yes
 
   }
 
