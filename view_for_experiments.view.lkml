@@ -16,7 +16,8 @@ view: view_for_experiments {
   dimension: order_date {
     type: date
     description: "Order date. Doesn't have drilled fields"
-    sql: ${TABLE}.order_date;;
+    sql: ${TABLE}.order_date
+    allow_fill: yes;;
     }
 
 
@@ -67,9 +68,7 @@ view: view_for_experiments {
 
   dimension: shipping_country {
     type: string
-    sql: ${TABLE}.shipping_country
-    allow_fill: yes;;
-
+    sql: ${TABLE}.shipping_country;;
   }
 
   dimension: sales_channel {
