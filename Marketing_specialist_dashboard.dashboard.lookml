@@ -189,10 +189,10 @@
     type: text
     title_text: ''
     subtitle_text: ''
-    body_text: |+
-      <center><img src="https://drive.google.com/uc?id=1Zn2UUZFFTJiqn1CYlT-mO7-7VFMpEShl" width="200" height="150"/></center>
+ #   body_text: |+
+ #     <center><img src="https://drive.google.com/uc?id=1Zn2UUZFFTJiqn1CYlT-mO7-7VFMpEShl" width="200" height="150"/></center>
 
-      <a href="https://crystalloids.eu.looker.com/looks/56?&f[orders.shipping_address_country_code]={{ _filters[orders.shipping_address_country_code] | url_encode }}"></a>
+ #     <a href="https://crystalloids.eu.looker.com/looks/56?&f[orders.shipping_address_country_code]={{ _filters[orders.shipping_address_country_code] | url_encode }}"></a>
 
     row: 4
     col: 16
