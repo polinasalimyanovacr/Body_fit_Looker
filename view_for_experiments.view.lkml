@@ -27,12 +27,15 @@ view: view_for_experiments {
 
   }
 
+#HTML
   dimension: financial_year {
     type: number
     sql: ${TABLE}.financial_year;;
     html:
-    {% if value > 100 %}
+    {% if value > 2021 %}
     <span style="color:darkgreen;"> {{rendered_value}} </span>
+    {% elsif value <2021 %}
+    <span stype="color:red;"> {{rendered_value}} </span>
     {% endif %};;
 
   }
