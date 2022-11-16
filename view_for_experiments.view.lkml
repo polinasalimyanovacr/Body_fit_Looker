@@ -30,6 +30,10 @@ view: view_for_experiments {
   dimension: financial_year {
     type: number
     sql: ${TABLE}.financial_year;;
+    html:
+    {% if value > 100 %}
+    <span style="color:darkgreen;"> {{rendered_value}} </span>
+    {% endif %};;
 
   }
 
@@ -76,6 +80,7 @@ view: view_for_experiments {
     <li> dialect: {{_dialect._name}} </li>
     <li> query timezaone: {{_query._query_timezone}} </li>
     <li> filters: {{_filters['view_for_experiments.sales_channel']}}</li>;;
+
   }
 
 #set the fields for drilling
