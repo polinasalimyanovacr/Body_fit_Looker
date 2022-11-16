@@ -72,7 +72,8 @@ view: view_for_experiments {
     <li> model: {{_model._name}}</li>
      <li> view: {{_view._name}}</li>
      <li> explore: {{_explore._name}}</li>
-     <li> field: {{_field._name}}</li>;;
+     <li> field: {{_field._name}}</li>
+    <li> dialect: {{_dialect._name}} </li>;;
   }
 
 #set the fields for drilling
