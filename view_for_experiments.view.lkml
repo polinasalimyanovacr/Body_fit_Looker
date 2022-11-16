@@ -136,6 +136,7 @@ set: default_drill {
     {% if value == 'Whey Perfection' %}
     <span style="color:#42a338;">{{rendered_value}}</span>
     {% endif %}
+    <span style = "color:black;">{{rendered_value}}</span>
     </a>;;
 
   }
