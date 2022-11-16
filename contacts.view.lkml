@@ -65,7 +65,8 @@ view: contacts {
 
   dimension: email_consent {
     type: yesno
-    sql: ${TABLE}.emailConsent ;;
+    sql: ${TABLE}.emailConsent
+    allow_fill:yes ;;
   }
 
   dimension: first_name {

@@ -16,8 +16,7 @@ view: view_for_experiments {
   dimension: order_date {
     type: date
     description: "Order date. Doesn't have drilled fields"
-    sql: ${TABLE}.order_date
-    allow_fill: yes;;
+    sql: ${TABLE}.order_date;;
     }
 
 
