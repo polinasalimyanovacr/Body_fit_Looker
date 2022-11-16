@@ -67,7 +67,8 @@ view: view_for_experiments {
 
   dimension: shipping_country {
     type: string
-    sql: ${TABLE}.shipping_country;;
+    sql: ${TABLE}.shipping_country
+    allow_fill: yes;;
 
   }
 
@@ -131,6 +132,8 @@ set: default_drill {
       label: "Explore Orders"
       url: "https://crystalloids.eu.looker.com/looks/39?product_name = {{value}}"
     }
+
+#HTML color format based on condition
     html:
     <a href="#drillmenu" target="_self">
     {% if value == 'Whey Perfection' %}
