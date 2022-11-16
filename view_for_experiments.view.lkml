@@ -111,7 +111,8 @@ set: default_drill {
     type: string
     sql: ${TABLE}.store_id;;
     drill_fields: [product_name, count, product_number]
-    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?store_id ={{value}}"><button>{{value}}</button></a> ;;
+    html: <a href="https://crystalloids.eu.looker.com/dashboards/48?store_id ={{value}}"><button>{{value}}</button></a>
+  ;;
   }
 
 #drill down option + set
@@ -130,6 +131,12 @@ set: default_drill {
       label: "Explore Orders"
       url: "https://crystalloids.eu.looker.com/looks/39?product_name = {{value}}"
     }
+    html:
+    <a href="#drillmenu" target="_self">
+    {% if value == 'Whey Perfection' %}
+    <span style="color:#42a338;">{{rendered_value}}</span>
+    {% endif %}
+    </a>;;
 
   }
 
