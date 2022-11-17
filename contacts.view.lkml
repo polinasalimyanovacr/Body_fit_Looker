@@ -174,7 +174,7 @@ view: contacts {
   filter: select_category {
     type: string
     suggest_explore: contacts
-    suggest_dimension: gender
+    suggest_dimension: contacts.gender
   }
 
   dimension: category {
