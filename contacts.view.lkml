@@ -169,12 +169,12 @@ view: contacts {
 #    {% endif %} ;;
 #  }
 
-#dynamic dimension using templated filters - New dimention for filter - The same filter
+#dynamic dimension using templated filters - New dimention "Category" that counts selected value and OTHERS
 
   filter: select_category {
     type: string
     suggest_explore: contacts
-    suggest_dimension: contacts.gender
+    suggest_dimension: contacts.age
   }
 
   dimension: category {
@@ -182,9 +182,9 @@ view: contacts {
     sql:
       CASE
       WHEN {% condition select_category %}
-        ${gender}
+        ${age}
         {% endcondition %}
-      THEN ${gender}
+      THEN ${age}
       ELSE 'All Other Categories'
       END
       ;;
