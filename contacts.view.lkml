@@ -162,12 +162,12 @@ dimension: dynamic_filter_category {
 label_from_parameter: select_category_parameter
 type: string
 sql:
-{% if select_category_parameter._parameter_value == 'Gender' %}
+{% if select_category_parameter._parameter_value == 'gender' %}
 ${gender}
-{% elsif select_category_parameter._parameter_value == 'Age' %}
-    ${age}
-    {% else %}
-    "Error"
+{% elsif select_category_parameter._parameter_value == 'age' %}
+${age}
+{% else %}
+"Error"
 {% endif %} ;;
  }
 
