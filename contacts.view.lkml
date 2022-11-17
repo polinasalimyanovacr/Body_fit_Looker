@@ -144,6 +144,30 @@ view: contacts {
     sql: ${TABLE}.phone ;;
   }
 
+  parameter: select_filter_category {
+    type: unquoted
+    default_value: "User characteristics"
+    allowed_value: {
+      value: "gender"
+      label: "Gender"
+    }
+    allowed_value: {
+      value: "age"
+      label: "Age"
+    }
+  }
+
+#  dimension: dynamic_filter_category {
+ #   label_from_parameter: select_filter_category
+#    type: string
+#    sql:
+#    {% if select_filter_category._parameter_value == 'Gender' %}
+#    ${gender}
+#    {% else %}
+#    ${age}
+#    {% endif %} ;;
+#  }
+
   set: detail {
     fields: [
       contact_id,

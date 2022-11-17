@@ -346,6 +346,9 @@
     col: 0
     width: 24
     height: 7
+
+# DASHBOARD FILTER PARAMETERS
+
   filters:
   - name: Eligible to send email
     title: Eligible to send email
