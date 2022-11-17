@@ -144,6 +144,7 @@ view: contacts {
     sql: ${TABLE}.phone ;;
   }
 
+#Parameter
   parameter: select_filter_category {
     type: unquoted
     default_value: "User characteristics"
@@ -167,6 +168,27 @@ view: contacts {
 #    ${age}
 #    {% endif %} ;;
 #  }
+
+#dynamic dimension using templated filters
+
+  filter: select_category {
+    type: string
+    suggest_explore: contacts
+    suggest_dimension: gender
+  }
+
+  dimension: category {
+    type: string
+    sql:
+      CASE
+      WHEN {% condition select_category %}
+        ${age}
+        {% endcondition %}
+      THEN ${gender}
+      ELSE 'All Other Categories'
+      END
+      ;;
+  }
 
   set: detail {
     fields: [
