@@ -174,7 +174,7 @@ view: contacts {
   filter: select_category {
     type: string
     suggest_explore: contacts
-    suggest_dimension: contacts.age
+    suggest_dimension: country_code
   }
 
   dimension: category {
@@ -182,9 +182,9 @@ view: contacts {
     sql:
       CASE
       WHEN {% condition select_category %}
-        ${age}
+        ${country_code}
         {% endcondition %}
-      THEN ${age}
+      THEN ${country_code}
       ELSE 'All Other Categories'
       END
       ;;
