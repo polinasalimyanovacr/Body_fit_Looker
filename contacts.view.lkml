@@ -145,9 +145,9 @@ view: contacts {
   }
 
 #Parameter
-  parameter: select_filter_category {
+  parameter: select_category_parameter {
     type: unquoted
-    default_value: "gender"
+    default_value: ""
     allowed_value: {
       value: "gender"
       label: "Gender"
@@ -170,7 +170,7 @@ view: contacts {
 #  }
 
 #dynamic dimension using templated filters - New dimention "Category" that counts selected value and OTHERS
-  filter: select_category {
+  filter: select_category_dinamic_filter {
     type: string
     suggest_explore: contacts
     suggest_dimension: gender
@@ -180,7 +180,7 @@ view: contacts {
     type: string
     sql:
       CASE
-      WHEN {% condition select_category %}
+      WHEN {% condition select_category_dinamic_filter %}
         ${gender}
         {% endcondition %}
       THEN ${gender}
