@@ -178,7 +178,7 @@ view: contacts {
   }
 
   dimension: category {
-    type: number
+    type: string
     sql:
       CASE
       WHEN {% condition select_category %}

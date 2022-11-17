@@ -158,6 +158,27 @@ set: drill_product {
     sql: ${TABLE}.product_number ;;
   }
 
+  filter: select_category {
+    type: string
+    suggest_explore: view_for_experiments
+    suggest_dimension: order_status
+  }
+
+  dimension: category {
+    type: string
+    sql:
+      CASE
+      WHEN {% condition select_category %}
+        ${order_status}
+        {% endcondition %}
+      THEN ${order_status}
+      ELSE 'All Other Categories'
+      END
+      ;;
+  }
+
+
+
   set: detail {
     fields: [store_id,
     product_name,
