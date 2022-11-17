@@ -156,9 +156,13 @@ view: contacts {
       value: "age"
       label: "Age"
     }
+    allowed_value: {
+      value: "yearOfBirth"
+      label: "yearOfBirth"
+    }
   }
 
-dimension: dynamic_filter_category {
+dimension: dynamic_parameter_category {
 label_from_parameter: select_category_parameter
 type: string
 sql:
@@ -166,6 +170,8 @@ sql:
 ${gender}
 {% elsif select_category_parameter._parameter_value == 'age' %}
 ${age}
+{% elsif select_category_parameter._parameter_value == 'yearOfBirth' %}
+${year_of_birth}
 {% else %}
 "Error"
 {% endif %} ;;
