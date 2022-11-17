@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   crossfilter_enabled: true
-  description: ''
+  description: 'Marketing use case for learning and saling purposes'
   filters_location_top: false
   preferred_slug: pQL07jp2A6UgEfABgAEQzm
   elements:
