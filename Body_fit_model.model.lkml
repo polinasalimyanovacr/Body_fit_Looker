@@ -2,7 +2,7 @@ connection: "body-fit-dev"
 
 include: "/*.view.lkml"                 # include all views in this project
 # include: "bi-quarterly-purchases.dashboard.lookml"   # include a LookML dashboard
-#include: "/*.dashboard.lookml"   # include a LookML dashboards
+include: "/Marketing_specialist_dashboard.dashboard.lookml"   # include a LookML dashboards
 
 # Select the views that should be a part of this model,
 # and define the joins that connect them together.
