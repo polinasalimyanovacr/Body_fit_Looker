@@ -169,7 +169,7 @@ view: contacts {
 #    {% endif %} ;;
 #  }
 
-#dynamic dimension using templated filters
+#dynamic dimension using templated filters - New dimention for filter - The same filter
 
   filter: select_category {
     type: string
@@ -182,7 +182,7 @@ view: contacts {
     sql:
       CASE
       WHEN {% condition select_category %}
-        ${age}
+        ${gender}
         {% endcondition %}
       THEN ${gender}
       ELSE 'All Other Categories'
