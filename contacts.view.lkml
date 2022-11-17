@@ -164,8 +164,10 @@ type: string
 sql:
 {% if select_category_parameter._parameter_value == 'Gender' %}
 ${gender}
-{% else %}
-${age}
+{% elsif select_category_parameter._parameter_value == 'Age' %}
+    ${age}
+    {% else %}
+    "Error"
 {% endif %} ;;
  }
 
