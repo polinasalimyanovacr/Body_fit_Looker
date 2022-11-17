@@ -158,16 +158,16 @@ view: contacts {
     }
   }
 
-#  dimension: dynamic_filter_category {
- #   label_from_parameter: select_filter_category
-#    type: string
-#    sql:
-#    {% if select_filter_category._parameter_value == 'Gender' %}
-#    ${gender}
-#    {% else %}
-#    ${age}
-#    {% endif %} ;;
-#  }
+dimension: dynamic_filter_category {
+label_from_parameter: select_category_parameter
+type: string
+sql:
+{% if select_category_parameter._parameter_value == 'Gender' %}
+${gender}
+{% else %}
+${age}
+{% endif %} ;;
+ }
 
 #dynamic dimension using templated filters - New dimention "Category" that counts selected value and OTHERS
   filter: select_category_dinamic_filter {
