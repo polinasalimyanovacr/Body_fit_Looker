@@ -180,7 +180,7 @@
     name: button_243
     rich_content_json: '{"text":"Send selection","description":"Send your selection
       to Google Ads after the final check of your customers","newTab":true,"alignment":"center","size":"large","style":"FILLED","color":"#80868B",
-      "href":"https://crystalloids.eu.looker.com/looks/56?fields=orders.shipping_address_country_code&f[orders.shipping_address_country_code]=${orders.shipping_address_country_code}"}'
+      "href":"https://crystalloids.eu.looker.com/looks/56?fields=orders.shipping_address_country_code&f[orders.shipping_address_country_code]=orders.shipping_address_country_code"}'
     row: 2
     col: 16
     width: 7
