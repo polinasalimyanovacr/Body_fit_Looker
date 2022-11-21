@@ -171,7 +171,7 @@ view: orders {
     drill_fields: [shipping_address_country_code]
     link: {
       label: "TEST FOR THE LINK"
-      url: "https://crystalloids.eu.looker.com/looks/56?fields={{orders.shipping_address_country_code._value}}"
+      url: "https://crystalloids.eu.looker.com/looks/56?f[orders.shipping_address_country_code]={{orders.shipping_address_country_code._value}}"
     }
   }
 
