@@ -46,6 +46,8 @@
     col: 8
     width: 8
     height: 6
+
+
   - title: Top 10 customers by revenue
     name: Top 10 customers by revenue
     model: Body_fit_model

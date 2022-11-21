@@ -168,6 +168,10 @@ view: orders {
   dimension: total_order_revenue {
     type: number
     sql: ${TABLE}.totalOrderRevenue ;;
+    link: {
+      label: "TEST FOR THE LINK"
+      url: "{{orders.shipping_address_country_code._value}}"
+    }
   }
 
   dimension: currency {
