@@ -81,11 +81,8 @@ view: orders {
     sql_distinct_key: ${transaction_id} ;;
     sql: ${total_order_revenue} ;;
     # value_format: ${currency} ;;
-    #drill_fields: [shipping_address_country_code]
-    link: {
-      label: "Autoapply selection filters and send it using custom action"
-      url: "https://crystalloids.eu.looker.com/looks/56?f[orders.shipping_address_country_code]={{orders.shipping_address_country_code._value}}"
-    }
+    drill_fields: [detail_count_contacts*]
+
   }
 
 
