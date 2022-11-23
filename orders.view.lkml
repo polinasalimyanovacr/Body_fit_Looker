@@ -56,7 +56,7 @@ view: orders {
   measure: count_contacts {
     type: count_distinct
     sql: ${contact_id} ;;
-    drill_fields: [detail_count_contacts*]
+    #drill_fields: [detail_count_contacts*]
     link: {
       label: "Autoapply selection filters and send it using custom action"
       url: "https://crystalloids.eu.looker.com/looks/56?f[orders.shipping_address_country_code]={{orders.shipping_address_country_code._value}}"
