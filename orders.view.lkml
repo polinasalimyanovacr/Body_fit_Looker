@@ -170,7 +170,7 @@ view: orders {
     sql: ${TABLE}.totalOrderRevenue ;;
     drill_fields: [shipping_address_country_code]
     link: {
-      label: "TEST FOR THE LINK"
+      label: "Autoapply selection filters and send it using custom action"
       url: "https://crystalloids.eu.looker.com/looks/56?f[orders.shipping_address_country_code]={{orders.shipping_address_country_code._value}}"
     }
   }
