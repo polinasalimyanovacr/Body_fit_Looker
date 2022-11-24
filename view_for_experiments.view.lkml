@@ -51,7 +51,7 @@ view: view_for_experiments {
     {% if value == 'dispatched' %}
     <p style="color: red; background-color: orange; font-size: 100%; text-align:center"> {{rendered_value}}</p>
     {% elsif value == 'cancelled' %}
-    <p><img src="https://drive.google.com/uc?id=1FZAKVnPfSto4Fb_iVUQe472l9C_b9SPk" width="50" height="50"/> {{rendered_value}} </p>
+    <p><img src="https://drive.google.com/uc?id=1FZAKVnPfSto4Fb_iVUQe472l9C_b9SPk" width="20" height="20"/> {{rendered_value}} </p>
     {% else %}
     <p styl="color:black; background-color:lightblue; font-size:100%">{{rendered_value}}</p>
     {% endif %};;
