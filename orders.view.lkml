@@ -63,6 +63,18 @@ view: orders {
     }
   }
 
+  dimension: button_1 {
+
+    sql: ${contact_id} ;;
+
+    html: <-a href="https://crystalloids.eu.looker.com/looks/56/DashId?Filter%20Name=FilterValue"><-button>Load Custom Filters<-/button><-/a>
+
+      ;;
+
+  }
+
+
+
 #set the fields for drilling
   set: detail_count_contacts {
     fields: [contact_email_address,
