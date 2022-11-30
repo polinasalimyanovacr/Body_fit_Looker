@@ -67,7 +67,7 @@ view: orders {
 
     sql: ${contact_id} ;;
 
-    html: <-a href="https://crystalloids.eu.looker.com/looks/56/DashId?Filter%20Name=FilterValue"><-button>Load Custom Filters<-/button><-/a>
+    html: <a href="/dashboards/50?Filter%Country=FilterValue"><button>Load Custom Filters</button></a>
 
       ;;
 
