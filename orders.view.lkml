@@ -66,7 +66,7 @@ view: orders {
   dimension: button_1 {
 
     sql: ${contact_id} ;;
-    html: <a href="https://crystalloids.eu.looker.com/looks/56?f[orders.shipping_address_country_code]={{orders.shipping_address_country_code._value}}"><button>Load Custom Filters</button></a>
+    html: <a href="https://crystalloids.eu.looker.com/looks/56?f[orders.shipping_address_country_code]={{orders.shipping_address_country_code._value}}"><button>Send audience selection</button></a>
       ;;
 #dashboards/50?Country=NL
 #/looks/56?Country=NL
