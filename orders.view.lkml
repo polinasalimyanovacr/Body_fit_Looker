@@ -66,14 +66,12 @@ view: orders {
   dimension: button_1 {
 
     sql: ${contact_id} ;;
-    html: <a href="/looks/56?Country=NL"><button>Load Custom Filters</button></a>
+    html: <a href="/looks/56?Filter%Country=NL"><button>Load Custom Filters</button></a>
       ;;
 # dashboards/50?Filter%Country=FilterValue
 #dashboards/50?Country=NL
 
   }
-
-
 
 #set the fields for drilling
   set: detail_count_contacts {
