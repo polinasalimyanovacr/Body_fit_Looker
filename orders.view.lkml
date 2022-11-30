@@ -66,11 +66,9 @@ view: orders {
   dimension: button_1 {
 
     sql: ${contact_id} ;;
-
-    html: <a href="/dashboards/50?Filter%Country=FilterValue"><button>Load Custom Filters</button></a>
-
+    html: <a href="/dashboards/50?Country=NL"><button>Load Custom Filters</button></a>
       ;;
-
+# dashboards/50?Filter%Country=FilterValue
   }
 
 
